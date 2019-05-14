@@ -1,0 +1,24 @@
+<h1>Result</h1>
+<p>Find me in app/views/games/score.html.erb</p>
+
+
+<% if @exist %>
+  <% if @english %>
+    <p>Congrats! <%= @answer %> is valid</p>
+    <p>Your score is <%= @score %></p>
+  <% else %>
+    <p>Sorry but <%= @answer %> is not an english word</p>
+  <% end %>
+<% else %>
+  <p>Sorry, <%= @answer %> doesnt use the given letters</p>
+<% end %>
+
+<br>
+<br>
+<br>
+
+
+<br>
+<br>
+<br>
+<%= link_to "Try Again", new_path %>
